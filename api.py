@@ -11,7 +11,9 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
-from pydantic import BaseModel
+from pydantic import AnyHttpUrl, BaseModel
+
+from services.data_portal import DatasetConfig, client as portal_client
 
 BASE_DIR = Path(__file__).parent
 DATA_PATH = Path(os.getenv("CLIMATE_DATA_PATH", BASE_DIR / "data" / "climate_finance_sample.csv"))
@@ -70,6 +72,13 @@ class ClimateCountry(BaseModel):
     Country: str
     ISO3: str
     years: List[YearValue]
+
+
+class RemoteDataset(BaseModel):
+    key: str
+    name: str
+    description: str
+    source_url: AnyHttpUrl
 
 
 def _load_dataset() -> tuple[pd.DataFrame, List[str]]:
@@ -201,6 +210,48 @@ async def get_country(country: Optional[str] = Query(None, description="Filter b
     """Retrieve aggregated values grouped by country and ISO3 code."""
 
     return _group_and_transform(df, YEAR_COLUMNS, ["Country", "ISO3"], country=country)
+
+
+def _serialize_dataset_config(dataset: DatasetConfig) -> RemoteDataset:
+    return RemoteDataset(
+        key=dataset.key,
+        name=dataset.name,
+        description=dataset.description,
+        source_url=dataset.source_url,
+    )
+
+
+@app.get("/remote/datasets", response_model=List[RemoteDataset], tags=["Remote Data"])
+async def list_remote_datasets() -> List[RemoteDataset]:
+    """List supported datasets exposed through the IMF climate data portal."""
+
+    return [_serialize_dataset_config(dataset) for dataset in portal_client.list_datasets()]
+
+
+@app.get("/remote/datasets/{dataset_key}", tags=["Remote Data"])
+async def query_remote_dataset(
+    dataset_key: str,
+    where: Optional[str] = Query(None, description="ArcGIS where clause used to filter records"),
+    out_fields: Optional[str] = Query("*", description="Comma-separated field names to return"),
+    out_sr: Optional[int] = Query(4326, alias="outSR", description="Output spatial reference"),
+    limit: Optional[int] = Query(None, ge=1, description="Limit the number of records returned"),
+) -> dict:
+    """Query a remote dataset and return the raw payload from the portal."""
+
+    payload = await portal_client.fetch_dataset(
+        dataset_key=dataset_key,
+        where=where,
+        out_fields=out_fields,
+        out_sr=out_sr,
+        limit=limit,
+    )
+
+    dataset = portal_client.get_dataset(dataset_key)
+    return {
+        "dataset": _serialize_dataset_config(dataset),
+        "query": {"where": where or dataset.default_params.get("where"), "outFields": out_fields, "outSR": out_sr},
+        "data": payload,
+    }
 
 
 @app.get("/chat", tags=["Chatbot"])
