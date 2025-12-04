@@ -122,3 +122,11 @@ The API now includes helper endpoints for the IMF climate data portal and its Ar
   * `limit`: Maximum number of records to return.
 
 The service currently ships with the Quarterly and Annual Greenhouse Gas Air Emissions Accounts datasets from the IMF portal. You can extend the registry in `services/data_portal.py` if more endpoints are needed.
+
+#### Additional IMF portal API references
+These ArcGIS API endpoints from the IMF climate data portal are ready for inclusion in the registry if you want broader coverage without hunting for URLs:
+
+* Greenhouse gas emissions intensity (value added): `https://climatedata.imf.org/datasets/7cec1228bfbe4a5e876ca5a5abedd64f/api`
+* National climate policies and targets: `https://climatedata.imf.org/datasets/d22a6decd9b147fd9040f793082b219b/api`
+* Fossil fuel subsidies and energy taxation: `https://climatedata.imf.org/datasets/0bfab7fb7e0e4050b82bba40cd7a1bd5/api`
+* Climate-related financial disclosures and stress testing: `https://climatedata.imf.org/datasets/7cae02f84ed547fbbd6210d90da19879/api`
