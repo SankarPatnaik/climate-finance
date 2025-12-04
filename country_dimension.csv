@@ -1,0 +1,223 @@
+Country,ISO2,ISO3,Country_ID
+Albania,AL,ALB,136e10fa-e800-5f96-9398-e6d80848fde0
+"Andorra, Principality of",AD,AND,0aa0f9ab-01aa-5b13-8dbe-aefbf62eab5f
+Antigua and Barbuda,AG,ATG,5d227920-42db-5430-b4b7-99f8fe6d3aea
+Argentina,AR,ARG,a36fccf1-3d1b-57bb-b61e-ab86c2d007c7
+"Armenia, Rep. of",AM,ARM,6902cb84-1638-5111-b45f-45ef5968cdf4
+Australia,AU,AUS,c7e0ccaf-4d68-5724-9183-d481e0110639
+Austria,AT,AUT,496b3e81-142f-5b2b-903f-a2d2bf51a0f3
+"Bahamas, The",BS,BHS,b206640b-d1cb-59a7-ae53-54a497d78d4e
+Bangladesh,BD,BGD,50bab279-93b1-53f3-9507-7f68e80f01da
+Belgium,BE,BEL,182afa64-9168-52a5-ae0e-481cb46c2f57
+Belize,BZ,BLZ,0307ff7e-9b31-530e-bd4d-cb265a8b2ec4
+Bhutan,BT,BTN,69a13c63-159b-514d-8e6e-ba63302e0fba
+Bolivia,BO,BOL,1f4e2f4b-16d0-5e62-a73a-36a52660ba72
+Botswana,BW,BWA,4e14222d-8338-5d57-bc27-458855ecf9c3
+Brazil,BR,BRA,6a5eceb0-9dcd-546e-80ae-fa41681f5cc2
+Bulgaria,BG,BGR,87131ad7-1a17-509e-b5fc-f9d917d6fd28
+Burkina Faso,BF,BFA,6343ccfa-1087-52da-ab0e-105f88198bbe
+Cabo Verde,CV,CPV,dc15ae02-cc43-59f6-b1ba-f9d177cae2e7
+Cambodia,KH,KHM,905d5614-df7f-579f-ac99-fcb05dee76e4
+Cameroon,CM,CMR,4c681e7c-d95f-5fcb-9e41-965e22f43ebe
+Canada,CA,CAN,9a1f3e51-a750-5c73-bd88-e55c3f4e46f7
+Chad,TD,TCD,925d3e7e-717f-567c-aaec-631dad3be313
+Chile,CL,CHL,ff6a4880-a4d9-5f45-b744-67730a399dcf
+"China, P.R.: Mainland",CN,CHN,52fa3247-8069-52e9-ae18-276d4710897b
+Colombia,CO,COL,71ed7299-e6ea-5152-8fe0-bd91ad7f4b37
+"Congo, Dem. Rep. of the",CD,COD,6a5844ef-99e4-52ff-8c54-8a2ee783d3e1
+"Congo, Rep. of",CG,COG,3781560b-07a5-50aa-9630-c5b60fc73472
+Cook Islands,CK,COK,80d6ea7f-3481-5996-8c4d-d20ba265b2bd
+Costa Rica,CR,CRI,7e4ec19a-06d9-50d9-965a-e26282f41425
+Côte d'Ivoire,CI,CIV,4034037c-f087-5b67-be82-40b9be4b7150
+"Croatia, Rep. of",HR,HRV,3ae8ccc1-c6e9-5f15-ae48-0e029ede9ad1
+Cyprus,CY,CYP,1b8e8e42-f96e-5fa9-89d3-50bc08109fa2
+Czech Rep.,CZ,CZE,7d127cb6-ba2f-53c4-b4c0-1002b61f1f5c
+Denmark,DK,DNK,37fe686d-e4d0-5e54-ae11-9dd21d76778c
+Dominican Rep.,DO,DOM,2d9d4244-90b1-5b98-b6f0-d62e6ae5398c
+Ecuador,EC,ECU,2445aa58-4d91-53ec-a9c4-a942eae0cdf1
+"Egypt, Arab Rep. of",EG,EGY,3004c585-2b8e-5527-afe7-9bb4f18fc867
+El Salvador,SV,SLV,6f203a82-e9c8-5cc0-b2fc-5ecd1eaf327c
+"Equatorial Guinea, Rep. of",GQ,GNQ,0bf8cae2-776d-55ba-8a61-e3348e84525b
+"Estonia, Rep. of",EE,EST,0217ccbd-c94b-5930-8999-8737231623e4
+"Eswatini, Kingdom of",SZ,SWZ,a7b56560-57fa-5caa-9c76-5ee14af143a9
+"Fiji, Rep. of",FJ,FJI,b2ad7c9d-a720-5a34-b8db-42345e8375c1
+Finland,FI,FIN,fcc6f1c6-bdfc-5730-8455-1e1c9aed11da
+France,FR,FRA,927f4362-e3b0-5cf9-987a-a68731336866
+Georgia,GE,GEO,2023c643-dac6-5d2e-b199-2719d0aed710
+Germany,DE,DEU,8ea2472f-735e-5e5d-aa72-0004fba10a60
+Ghana,GH,GHA,1d444af5-d163-5ee7-9ab4-03db8869f41e
+Greece,GR,GRC,cae92c20-1eb8-5e41-8bd0-1aed10acb8ed
+Guatemala,GT,GTM,73684767-5e0b-53b0-88fc-d939d6edf84f
+Guyana,GY,GUY,f6f9825e-0830-5241-8ed4-85c44eaec69d
+Honduras,HN,HND,e4473a63-391e-5efa-aa86-c349fe84f011
+Hungary,HU,HUN,4e235bcd-d8fa-5331-9f74-849baf1b8610
+Iceland,IS,ISL,5b313f27-b7a7-52d7-9f39-37775f8aa782
+Ireland,IE,IRL,00cda750-5072-5fb8-86cf-d202e5bfc9ae
+Israel,IL,ISR,16744b0c-5255-5198-9431-0ea0c868447d
+Italy,IT,ITA,ef61083c-7e3d-5821-aa66-72cafeb112d6
+Jamaica,JM,JAM,a6b5ce3c-c18c-5c5d-b0f9-696c2ffb62c0
+Japan,JP,JPN,3919ea51-a82b-5da1-a11c-c2085a62b232
+"Kazakhstan, Rep. of",KZ,KAZ,81279de0-ac99-579d-8220-16a9b9e8bad0
+Kenya,KE,KEN,255bfb66-6a71-58e4-bab1-151cba02a3d7
+"Korea, Rep. of",KR,KOR,ce882b3e-ccd5-5daa-9371-0393f010b7d3
+"Kosovo, Rep. of",XK,,97101129-ea52-5c6a-bc8d-298e111e35a8
+Kyrgyz Rep.,KG,KGZ,45934c51-6a95-5db0-87f8-bea1450677d3
+Latvia,LV,LVA,dfc2dad2-84a6-5375-b252-007a796abca8
+"Lesotho, Kingdom of",LS,LSO,6430ba13-5fa6-5902-9f64-3ae93d627d0c
+Lithuania,LT,LTU,f57b1421-41eb-5ec2-8104-05f046937e6a
+Luxembourg,LU,LUX,acc4a152-5e6a-5689-b204-3505c74df6f6
+"Madagascar, Rep. of",MG,MDG,6fff9635-7661-5750-99ae-a36955b19e75
+Malaysia,MY,MYS,2940cb26-fb09-53ed-becf-608787b9ea66
+Maldives,MV,MDV,22d12b23-c18c-5be4-b0ec-77748a2806c1
+Mali,ML,MLI,b4de5ee9-5492-5797-b72b-dac0b2e85453
+Malta,MT,MLT,6d9b96ab-f1c8-5329-9cc7-65584ec8af89
+"Mauritania, Islamic Rep. of",MR,MRT,30116258-8e3f-5ea0-bbf9-f760fd12b873
+Mauritius,MU,MUS,1f86a2e5-c0cf-5771-b346-c3101e44611c
+Mexico,MX,MEX,5582378a-71e9-5cfc-9f82-4bd39b305a45
+Mongolia,MN,MNG,d01e2e9c-d63b-505c-897b-e45f72e9ef87
+Montenegro,ME,MNE,8f7d1161-f696-5487-93ad-5c329e10fc53
+Morocco,MA,MAR,b999570a-4626-5c53-8871-fa90ced859b3
+Namibia,,NAM,2ce0911d-b87c-582c-bc28-f9660cdc22c6
+"Nauru, Rep. of",NR,NRU,add8576a-c78e-5044-b5f6-db57fa020d80
+"Netherlands, The",NL,NLD,22a25f17-e468-5ed4-a6d3-9e222d211c95
+New Zealand,NZ,NZL,f1b3d299-0ed6-5106-8f2e-793a9d03ed95
+Nicaragua,NI,NIC,f5852376-8efc-5284-abf2-8b13408277ea
+Niger,NE,NER,5b61ce23-84d7-5a7c-990d-adcc0d538a74
+Nigeria,NG,NGA,efa18fa1-4a35-5e3c-ad9f-f6d556283463
+"North Macedonia, Republic of ",MK,MKD,17c3ff0e-bce9-5e51-bfb9-424c868c8afc
+Norway,NO,NOR,1256c5de-d3e5-5d94-97fb-2c7295c856a6
+Pakistan,PK,PAK,a25b9285-186b-5913-a89f-6dc7b0f10695
+Panama,PA,PAN,8d480d94-ff35-50e9-911d-23314dab7135
+Papua New Guinea,PG,PNG,38c055df-4d66-5ae6-84cf-5d2be4d0e744
+Paraguay,PY,PRY,e4004f6e-fc82-525d-bfd6-ff5ceece7405
+Peru,PE,PER,6ff5180e-56f6-567d-ab35-2b80890f8dfc
+Philippines,PH,PHL,5ef266ac-d33d-56b2-8f43-bee024985954
+"Poland, Rep. of",PL,POL,1b75dd64-b737-515f-b503-bedd31740152
+Portugal,PT,PRT,6e30310b-0470-573e-8a6e-4b2782030e0a
+Romania,RO,ROU,4275e604-fa02-534f-9b75-285970d8cc55
+Rwanda,RW,RWA,ef7774ce-b7e7-5e7c-a9c5-0db70fa2bd06
+Samoa,WS,WSM,0ebe1a2c-abb6-51a2-9870-669585f3d470
+"San Marino, Rep. of",SM,SMR,f2126a2e-441c-5236-a4b8-59e60e6624a9
+Senegal,SN,SEN,6aac1735-af5e-5b11-966c-01d5aaef2942
+"Serbia, Rep. of",RS,SRB,3f41f4f3-6b22-59f2-a603-78d1945e9ac7
+Seychelles,SC,SYC,a48da4c2-d4dd-58f2-8140-fe142cc9ce30
+Sierra Leone,SL,SLE,b4998ea9-415a-5955-be43-dd53bdf580c4
+Singapore,SG,SGP,ff4f4582-6497-5b1e-b358-3adbde3f2e7a
+Slovak Rep.,SK,SVK,ebec6c9c-7c72-5980-8b43-128d345762ff
+"Slovenia, Rep. of",SI,SVN,9cf97fa1-ef71-5cb1-8c6d-fb9702e2f42b
+Solomon Islands,SB,SLB,918045ef-a719-5ccc-9397-6c17f0d876ae
+South Africa,ZA,ZAF,22545d83-c064-5ae6-bace-045cfd3377e5
+Spain,ES,ESP,6a3b2d94-6214-5c88-86bb-ce6201e1c07a
+St. Kitts and Nevis,KN,KNA,01467f67-1313-5f22-a08b-2705f68672c7
+St. Lucia,LC,LCA,487e6dfd-28d2-52b5-97a9-d092ceed11db
+Sweden,SE,SWE,00433ce9-7217-53d4-90f0-75b51d9380d0
+Switzerland,CH,CHE,c365fb02-18c2-5ff9-8be6-127559367fcc
+Thailand,TH,THA,393e6d45-7534-569e-897c-38e4965b2c8b
+Togo,TG,TGO,ac9a8ba4-bb51-5cb1-a54a-56e8d7a255ae
+Trinidad and Tobago,TT,TTO,854b0b62-764e-5f2c-9541-ca33f03395f5
+Tunisia,TN,TUN,bc0e47be-47db-5da0-9ae3-0d1525cb2283
+"Türkiye, Rep. of",TR,TUR,cc00369f-eeb9-5de6-9044-51ca64c15840
+Uganda,UG,UGA,15027778-de27-5998-af29-f4041e6da217
+Ukraine,UA,UKR,ca271527-5223-5558-8f33-7a3d5e7a8f77
+United Kingdom,GB,GBR,5be596b7-391c-5bbb-b055-db88d7b65fff
+United States,US,USA,10858c7a-2def-5a46-bcd4-02cc0e5b85ca
+Uruguay,UY,URY,edf138ed-12c4-55fe-b78e-45fdff126eec
+"Venezuela, Rep. Bolivariana de",VE,VEN,a47fec15-9a72-577d-bc24-355a1de5be76
+Vietnam,VN,VNM,3701feed-4b13-560e-8124-b1189b874ca3
+West Bank and Gaza,PS,PSE,e2e373e7-fe02-587a-8a3d-145366ec1460
+"Afghanistan, Islamic Rep. of",AF,AFG,b84cdea4-4a63-55c5-b68a-afea7372d377
+Algeria,DZ,DZA,f65db901-6fb7-58dc-aaa5-d889832c18db
+Angola,AO,AGO,4fe8a8dc-0dfc-5d0e-aca3-9422daeaa651
+"Azerbaijan, Rep. of",AZ,AZE,7fd459da-26a8-5e47-b2fa-c851af12b261
+"Bahrain, Kingdom of",BH,BHR,14081326-cd99-5a6b-bc48-948dfb50e3d2
+"Belarus, Rep. of",BY,BLR,fd245142-ad5d-5b15-a23a-f253c6d96625
+Burundi,BI,BDI,ef30d115-ad50-5075-a2df-6e75277e2c5c
+"China, P.R.: Hong Kong",HK,HKG,f3e1c2a7-ca03-5a34-b91a-55f501e094ac
+"Ethiopia, The Federal Dem. Rep. of",ET,ETH,3ca32d7b-00d8-541c-8df6-f2ba2138845f
+Indonesia,ID,IDN,32e1a60a-058d-5dfb-a80a-5bddf2c7af07
+"Iran, Islamic Rep. of",IR,IRN,0e9dcfc0-7006-5497-86c9-b9c18066f5fe
+Jordan,JO,JOR,dc961945-0473-55f3-b49e-ad76623312f3
+Kiribati,KI,KIR,ec0c11cd-594c-5dff-8685-df6a6d1a327e
+Kuwait,KW,KWT,a7c69c3e-5677-5957-b5e6-a40a95638f67
+Lebanon,LB,LBN,321b2d06-9937-52c6-a07b-b36421ab8e65
+Liberia,LR,LBR,a267b8bb-6288-5a0d-8b17-967856d255eb
+"Marshall Islands, Rep. of the",MH,MHL,7b97712d-e802-5aa0-b1e2-987cfac36dcc
+"Micronesia, Federated States of",FM,FSM,f5484675-0902-55b7-baba-fcbebec2389d
+"Moldova, Rep. of",MD,MDA,4a8e5d8d-0059-58c5-9f12-a40411d8e98f
+Myanmar,MM,MMR,b131b159-9cd9-5ceb-819b-2b0a0a949a55
+Nepal,NP,NPL,f245dad2-4826-5f95-b893-b7b4ce937070
+Oman,OM,OMN,0f213293-a6d4-5732-a45f-b2298244f1c0
+"Palau, Rep. of",PW,PLW,6b82a0df-9702-5ab9-85f4-ce867cd9b447
+Qatar,QA,QAT,ec9b48e0-1318-5ebc-9492-41f602a6dda4
+Russian Federation,RU,RUS,a8be44c1-547a-55dd-aa13-f7e3088b06cc
+Somalia,SO,SOM,6da1f781-271d-55fd-b08f-cd11f1f09ea5
+"Tanzania, United Rep. of",TZ,TZA,7fda704e-b81a-53a4-aad8-414244020e02
+"Timor-Leste, Dem. Rep. of",TL,TLS,90e382c9-eb7f-5a5d-b63d-4c2cc3dff27b
+Tonga,TO,TON,17d25678-1ee2-5401-aa82-50e16c4d664b
+United Arab Emirates,AE,ARE,346de830-f3ca-5792-a0b1-b57a7116e09d
+"Uzbekistan, Rep. of",UZ,UZB,8cd195b7-a7ae-51e0-9284-55f0a363f8f7
+"Yemen, Rep. of",YE,YEM,11096cb5-3f7c-5efe-96dc-9e88bca8aa14
+Zambia,ZM,ZMB,206fbc98-030f-50b4-991d-871a58726888
+Barbados,BB,BRB,b5ad8592-f9c3-59dd-86fb-ed4625ec853e
+Benin,BJ,BEN,3bee796c-edb3-53a7-b3f5-774242156dfa
+Bosnia and Herzegovina,BA,BIH,218b1201-9335-59da-93c8-3e91565488a9
+Brunei Darussalam,BN,BRN,33092f38-6a36-5d1e-8855-fcec12c1caa5
+Central African Rep.,CF,CAF,d74f90b1-d408-59f5-ac9c-918c33c50501
+"Comoros, Union of the",KM,COM,1c1a21cd-f4e7-530c-83f0-e2993690e78b
+Djibouti,DJ,DJI,83151da1-1bb4-54d5-aa03-64f712278917
+Gabon,GA,GAB,536fabc2-c0da-5319-bf32-603ab49e4cf1
+"Gambia, The",GM,GMB,48c85fa8-f79c-5330-99e4-4d1027c2c2ec
+Guinea,GN,GIN,2f558841-445c-5c5d-94d9-2ce04f848811
+Guinea-Bissau,GW,GNB,8dfe4c5f-7ae1-5677-aae1-adf0ef154ff3
+Haiti,HT,HTI,23c00da5-7788-59a3-a241-dcade6dcbc00
+India,IN,IND,4f2b8261-0748-5de8-9eec-3cf39579924f
+Iraq,IQ,IRQ,cba0e6a0-96e1-5bd9-81ce-83687550ad68
+Lao People's Dem. Rep.,LA,LAO,974ebaa3-1cb5-516e-9377-7d9499137686
+Libya,LY,LBY,7de303d2-f703-51a3-9bdd-3a5f9ec5bbae
+Malawi,MW,MWI,f4ddaa94-fbc6-558d-bc98-7b161bfb7deb
+"Mozambique, Rep. of",MZ,MOZ,cc3737c5-c689-54e3-b2ba-60c76be1ff46
+"São Tomé and Príncipe, Dem. Rep. of",ST,STP,dc31543b-8659-5ea8-a038-7ee25e4d3d19
+Saudi Arabia,SA,SAU,6d945447-7f05-5a9d-bdac-2d5416d72ac9
+Sri Lanka,LK,LKA,80f1bcc0-7a00-588e-a7a4-815d3f13b0e4
+Sudan,SD,SDN,d34335f8-d4e2-564c-8571-bce8baebe83d
+Suriname,SR,SUR,54410b92-065a-581f-8c70-83f6c1185c1e
+"Tajikistan, Rep. of",TJ,TJK,a7779dd1-89a1-5dc9-8915-2824b3806a85
+Turkmenistan,TM,TKM,a911c57a-39f0-59e3-98c7-cb282f1e68ca
+Zimbabwe,ZW,ZWE,9f12223a-d11e-527a-8e60-19a262169496
+Anguilla,AI,AIA,28e7f667-379b-50da-8480-563731397776
+"Aruba, Kingdom of the Netherlands",AW,ABW,e4a016e2-c6c0-5c91-90fc-29f202a4af5e
+Belgium-Luxembourg,,,6d31ae46-7e27-55be-ab2e-735f58acd0fd
+Bermuda,BM,BMU,3d983769-edd2-533e-ba61-a89117345a08
+Cayman Islands,KY,CYM,991fe159-3995-5668-970b-23674efe2d3e
+"China, P.R.: Macao",MO,MAC,9447b43e-aef5-5916-beb9-cb921fdb4f0f
+Cuba,CU,CUB,60e243aa-4e0d-5576-b470-47d8abc6d962
+Dominica,DM,DMA,c7a59d8f-3a67-51ac-a7fe-84cbc59e0858
+"Eritrea, The State of",ER,ERI,40669ecc-b410-5058-ad40-f19e742e3261
+Faroe Islands,FO,FRO,be18e643-15ef-55e4-a1f1-18b2580dba3d
+Fmr Sudan,,,e1a11dc9-c01e-5e67-8c1b-d34a9e59d3cb
+French Polynesia,PF,PYF,6151ee29-190b-5c8e-9ebb-966c8a4a1be3
+Greenland,GL,GRL,01e856ca-099a-5a9f-a58a-87f533b55750
+Grenada,GD,GRD,5b5ac534-6bf8-5f3b-9b3d-2315cd5d9624
+Guadeloupe,GP,GLP,6904c38c-4aa3-590c-9c60-87e6b396afa8
+"Guiana, French",GF,GUF,545c5c8a-d58f-5eb1-8669-71bb919b3812
+Martinique,MQ,MTQ,15e8e59f-a34c-5795-83d9-56322e9e8913
+Mayotte,YT,MYT,2c55d66c-abec-5b7c-87e2-fe15fd110d95
+Montserrat,MS,MSR,2982283a-6e5d-56f0-aaeb-0982dcc51ea8
+Netherlands Antilles,AN,ANT,a40c0f55-4352-57c7-968d-4b1264f6ec47
+New Caledonia,NC,NCL,836b3b2d-759e-5660-8a57-298d1a2208a6
+"Other Asia, nes",,,c77e1451-d8d9-5460-8773-b548fb888759
+Réunion,RE,REU,bca8c0bd-0e28-5c41-afb3-060df2305522
+Serbia and Montenegro,CS,SCG,7ea2a08c-c251-5cfe-b6dc-64563d2cd38e
+South African Common Customs Area (SACCA),,,1a329d5a-fb22-50e3-84d7-bdca818ba9e0
+St. Vincent and the Grenadines,VC,VCT,bef4b799-712c-5190-a856-df5870aa34d4
+Syrian Arab Rep.,SY,SYR,834ce053-cc7a-5585-a082-5287fcb036c8
+Turks and Caicos Islands,TC,TCA,fafe0ae0-2025-5910-b640-32c8d1b81134
+Tuvalu,TV,TUV,2b6b7233-5574-5ec7-81a0-e4dc0274849c
+Vanuatu,VU,VUT,9328b22b-6f16-538e-aa00-84328ba95688
+Wallis and Futuna Islands,WF,WLF,e6a9b567-b381-593e-9a3d-eb2612c4d73c
+British Virgin Islands,VG,VGB,0fc74f55-2b27-541a-a1e6-729c530f90f9
+Guernsey,GG,GGY,e1fb95d1-dc03-5dcb-a42f-54f7a2270deb
+Jersey,JE,JEY,faa70334-f742-5066-9c4d-0d0933fa0434
+Liechtenstein,LI,LIE,99e6bec4-fac9-5a71-8241-8ac3241171a3
+Taiwan Province of China,TW,TWN,ebe5d2a3-5bf6-539a-8b86-c9fc49268e11
+World,,WLD,d2f031c8-0f4b-5f7d-886f-77edc453baa8

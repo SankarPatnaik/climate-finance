@@ -1,0 +1,41 @@
+CTS Code,CTS Name,CTS Full Descriptor,CTS_ID
+ECGTE,Environmental Taxes,"Environment, Climate Change, Government Policy, Taxes, Environmental Taxes",b937c17f-5056-5e25-8129-41758ae683e0
+ECGTEN,Taxes on Energy (Including Fuel for Transport),"Environment, Climate Change, Government Policy, Taxes, Environmental Taxes, Taxes on Energy (Including Fuel for Transport)",e3064023-a332-5b8a-93c0-48a3caef2bef
+ECGTEP,Taxes on Pollution,"Environment, Climate Change, Government Policy, Taxes, Environmental Taxes, Taxes on Pollution",41709b16-1b39-568e-b82d-80dc1f93b856
+ECGTER,Taxes on Resources,"Environment, Climate Change, Government Policy, Taxes, Environmental Taxes, Taxes on Resources",e94ef07a-85c6-5da3-8692-d0cbe79fcaf3
+ECGTET,Taxes on Transport (Excluding Fuel for Transport),"Environment, Climate Change, Government Policy, Taxes, Environmental Taxes, Taxes on Transport (Excluding Fuel for Transport)",0c52ffd8-788a-55c5-9cc3-bd3a70985d40
+GENB_G14,Expenditure on Biodiversity & Landscape Protection,"Government and Public Sector Finance, Expenditure By Cofog, [Sector], Environmental Protection, Protection of Biodiversity and Landscape [2014 Manual]",f37ede13-a39e-5cd7-a32d-2ea3350a88ad
+GEN_G14,Environmental Protection Expenditures,"Government and Public Sector Finance, Expenditure By Cofog, [Sector], Environmental Protection [2014 Manual]",f26d6212-0154-519a-8a44-fe6a1ac0dcd4
+GENO_G14,Expenditure on Environmental Protection Not Elsewhere Classified,"Government and Public Sector Finance, Expenditure By Cofog, [Sector], Environmental Protection, Environmental Protection Not Elsewhere Classified [2014 Manual]",745db1fb-e1b8-51d1-827f-99306b52eeb4
+GENR_G14,Expenditure on Environmental Protection R&D,"Government and Public Sector Finance, Expenditure By Cofog, [Sector], Environmental Protection, R&D Environmental Protection [2014 Manual]",f0f9e656-4209-5dfb-b153-741925628793
+GENP_G14,Expenditure on Pollution Abatement,"Government and Public Sector Finance, Expenditure By Cofog, [Sector], Environmental Protection, Pollution Abatement [2014 Manual]",3cf8cc50-43b4-505e-9b45-f8a25c7b757c
+GENM_G14,Expenditure on Waste Management,"Government and Public Sector Finance, Expenditure By Cofog, [Sector], Environmental Protection, Waste Management [2014 Manual]",176196b6-ce5c-5c80-acbe-c948277ce76f
+GENW_G14,Expenditure on Waste Water Management,"Government and Public Sector Finance, Expenditure By Cofog, [Sector], Environmental Protection, Waste Water Management [2014 Manual]",588ba2e9-c936-5da9-9585-b948b35b78ff
+ECGFTEC,Explicit; Coal,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Explicit, Coal",3cf488d8-e888-540d-8a96-e3d04f6bea72
+ECGFTET,Explicit; Electricity,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Explicit, Electricity",e3cd227b-bbf8-51f3-b200-a1adec567393
+ECGFTEN,Explicit; Natural Gas,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Explicit, Natural Gas",4cddba2b-0308-5935-bd01-ceae21ba2c21
+ECGFTEP,Explicit; Petroleum,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Explicit, Petroleum",c853e69d-edb6-57e7-85ce-c8fb0327e65f
+ECGFTE,Explicit,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Explicit",15f13dc8-572c-5d28-a7cd-eca5a7e1e2b9
+ECGFT,Total Implicit and Explicit,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit",16fda015-0fc5-5dca-a797-8ef456274726
+ECGFTN,Total Implicit and Explicit; Natural Gas,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Natural Gas",524c00e3-2d33-514a-b1bf-c057520d9b10
+ECGFTC,Total Implicit and Explicit; Coal,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Coal",8c4015c1-a83e-5f89-b1be-4468924e9170
+ECGFTT,Total Implicit and Explicit; Electricity,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Electricity",e3e551db-c689-5b3a-ad7c-0563207c8fc5
+ECGFTP,Total Implicit and Explicit; Petroleum,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Petroleum",3703d0fd-bbf5-5e84-ae31-9abb2f381e45
+ECGFTIA,Implicit; Accidents,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Implicit, Accidents",cb802f52-5533-5a9b-9702-9f60e481856c
+ECGFTIC,Implicit; Coal,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Implicit, Coal",89907d4e-ce83-51d3-b6d7-f1509546d40b
+ECGFTIG,Implicit; Congestion,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Implicit, Congestion",8d196167-7a9a-5e0d-8729-19a29f127047
+ECGFTIT,Implicit; Electricity,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Implicit, Electricity",64936b34-9b65-5846-8c6a-3354f345490b
+ECGFTIF,Implicit; Foregone Vat,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Implicit, Foregone Vat",3305254c-ba47-53c4-b930-899bcaa16bf4
+ECGFTIW,Implicit; Global Warming,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Implicit, Global Warming",ad04bf06-25be-5ab3-b834-e78330e7ec2e
+ECGFTIL,Implicit; Local Air Pollution,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Implicit, Local Air Pollution",2769fc83-b3f9-5556-9801-07c6c31e3f93
+ECGFTIN,Implicit; Natural Gas,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Implicit, Natural Gas",d718f6dd-0b8a-57db-bd76-f6bb43dddf9e
+ECGFTIP,Implicit; Petroleum,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Implicit, Petroleum",c14230dd-5f27-50e2-b55e-8d9dfa272b2e
+ECGFTIR,Implicit; Road Damage,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Implicit, Road Damage",0adb48e0-b8e7-5b1a-8a59-5e24d8981675
+ECGFTI,Implicit,"Environment, Climate Change, Mitigation, Fossil Fuel Subsidies, Total Implicit and Explicit, Implicit",7c6a972b-5725-5028-a6e3-eccb9298b8bf
+ECBTLM,Trade in Low Carbon Technology Products; Imports,"Environment, Climate Change, Mitigation, Trade-Related, Trade in Low Carbon Technology Products, Imports",aae408b6-f191-5887-9d10-ccd35bbb2c84
+ECBTLX,Trade in Low Carbon Technology Products; Exports,"Environment, Climate Change, Mitigation, Trade-Related, Trade in Low Carbon Technology Products, Exports",aa2f22fa-507d-58da-9544-a6888859ae6e
+ECBTL,Trade in Low Carbon Technology Products,"Environment, Climate Change, Mitigation, Trade-Related, Trade in Low Carbon Technology Products",a51fbeaf-8e8d-5f7a-b5a7-7d1e1952c900
+ECBTLB,Trade in Low Carbon Technology Products; Trade Balance,"Environment, Climate Change, Mitigation, Trade-Related, Trade in Low Carbon Technology Products, Trade Balance",8f23781d-0d45-535f-863d-8481a63a916c
+ECFFI,Green Bonds Issuances,"Environment, Climate Change, Financial and Physical and Transition Risk Indicators, Green Bonds, Green Bonds Issuances ",3d92cc04-a587-5d1d-889b-d0e55eb90b1d
+ECFF,Green Bonds,"Environment, Climate Change, Financial and Physical and Transition Risk Indicators, Green Bonds",9a74ae76-34b7-5674-bd6a-868d10eb5ac3
+,,,62e248b6-fae7-590d-a745-2fc581dc3bd7
