@@ -1,226 +1,222 @@
-from fastapi import FastAPI, HTTPException, Query
-from pydantic import BaseModel
-from langchain_core.prompts import ChatPromptTemplate
-from fastapi.middleware.cors import CORSMiddleware
-from langchain_groq import ChatGroq
-from typing import List
-import pandas as pd
-import uvicorn
-import getpass
+from __future__ import annotations
+
 import os
-os.environ["GROQ_API_KEY"] = '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'
+from pathlib import Path
+from typing import List, Optional
 
-
-prompt_template = ChatPromptTemplate([
-    ("system", "You are a helpful assistant, your task is to provide information regrading climate and environment information"),
-    ("user", "{query}")
-])
-
-
+import pandas as pd
+from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
+from pydantic import BaseModel
 
-model = ChatGroq(model="llama-3.3-70b-versatile")
-
-
-class Year(BaseModel):
-    year : str
-    value : float
-
-
-
-class ClimateIndicator(BaseModel):
-    Country: str
-    Indicator: str
-    Unit: str
-    years: List[Year]
-
-class ClimategroupIndicator(BaseModel):
-    Country: str
-    Indicator: str
-    Sector:str
-    Unit: str
-    years: List[Year]
-
-
-class ClimateSector(BaseModel):
-    Country: str
-    Sector: str
-    Unit: str
-    years: List[Year]  
-
-class ClimategroupSector(BaseModel):
-    Country: str
-    Sector: str
-    Indicator : str
-    Unit: str
-    years: List[Year]  
-
-
-class ClimateCountry(BaseModel):
-    Country: str
-    ISO3: str
-    years: List[Year]  
-
-df = pd.read_csv('test.csv')
-
-
-
-
-# --- FastAPI Endpoints ---
+BASE_DIR = Path(__file__).parent
+DATA_PATH = Path(os.getenv("CLIMATE_DATA_PATH", BASE_DIR / "data" / "climate_finance_sample.csv"))
 
 app = FastAPI(
     title="Climate Finance Data API",
     version="1.0.0",
-    description="API for querying Climate Finance data.",
+    description="Queryable API exposing climate finance indicators with optional chat support.",
 )
 
-
-
-app = FastAPI(
-    title="Climate Finance Data API",
-    version="1.0.0",
-    description="API for querying Climate Finance data.",
-)
-
-origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
+class YearValue(BaseModel):
+    year: str
+    value: float
 
-def transform(data):
-    year_list = []
-    new_data ={}
-    for key , val in data.items():
-        if key.isdigit():
-            year_list.append({'year':key,'value':val})
-        else:
-            new_data[key]=str(val)
-    new_data['years']=year_list
-    return new_data
 
-#response_model=List[ClimateSector]
-#response_model=List[ClimateIndicator]
-@app.get("/sector", response_model=List[ClimateSector],tags=["Sector"])
-async def getSectorResponse(
-    country:str = Query(None, description="Filter by Country"),
-    sector : str = Query(None, description="Filter by Sector")):
+class ClimateIndicator(BaseModel):
+    Country: str
+    Indicator: str
+    Unit: str
+    years: List[YearValue]
 
-    """Retrieve all sector response records"""
-    df_temp = df.groupby(['Country','Sector','Unit'])[['2005',
-       '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014',
-       '2015', '2016', '2017', '2018', '2022']].sum().reset_index()
 
+class ClimateGroupedIndicator(BaseModel):
+    Country: str
+    Indicator: str
+    Sector: str
+    Unit: str
+    years: List[YearValue]
+
+
+class ClimateSector(BaseModel):
+    Country: str
+    Sector: str
+    Unit: str
+    years: List[YearValue]
+
+
+class ClimateGroupedSector(BaseModel):
+    Country: str
+    Sector: str
+    Indicator: str
+    Unit: str
+    years: List[YearValue]
+
+
+class ClimateCountry(BaseModel):
+    Country: str
+    ISO3: str
+    years: List[YearValue]
+
+
+def _load_dataset() -> tuple[pd.DataFrame, List[str]]:
+    if not DATA_PATH.exists():
+        raise FileNotFoundError(f"Dataset not found at {DATA_PATH.resolve()}")
+
+    df = pd.read_csv(DATA_PATH)
+    year_columns = [col for col in df.columns if col.isdigit()]
+
+    required = {"Country", "ISO3", "Sector", "Indicator", "Unit"}
+    missing = required.difference(df.columns)
+    if missing:
+        raise ValueError(f"Dataset missing required columns: {', '.join(sorted(missing))}")
+
+    return df.fillna(0), year_columns
+
+
+def _format_record(record: dict, year_columns: List[str]) -> dict:
+    years = [
+        {
+            "year": column,
+            "value": float(record.get(column, 0)),
+        }
+        for column in year_columns
+    ]
+
+    base_keys = {k: str(v) for k, v in record.items() if k not in year_columns}
+    base_keys["years"] = years
+    return base_keys
+
+
+def _group_and_transform(
+    df: pd.DataFrame,
+    year_columns: List[str],
+    group_fields: List[str],
+    country: Optional[str] = None,
+    sector: Optional[str] = None,
+    indicator: Optional[str] = None,
+) -> List[dict]:
+    filtered = df.copy()
 
     if country:
-        df_temp = df_temp[df_temp['Country']==country]
-
+        filtered = filtered[filtered["Country"] == country]
     if sector:
-        df_temp = df_temp[df_temp['Sector']==sector]
-
-    df_temp = df_temp.fillna(0)
-    new_data = [transform(record) for record in df_temp[:1000].to_dict(orient='records')]
-    return new_data
-
-@app.get("/group/sector", response_model=List[ClimategroupSector],tags=["Sector"])
-async def getSectorResponse(
-    country:str = Query(None, description="Filter by Country"),
-    sector : str = Query(None, description="Filter by Sector")):
-
-    """Retrieve all sector response records"""
-    df_temp = df.groupby(['Country','Indicator','Sector','Unit'])[['2005',
-       '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014',
-       '2015', '2016', '2017', '2018', '2022']].sum().reset_index()
-
-
-    if country:
-        df_temp = df_temp[df_temp['Country']==country]
-
-    if sector:
-        df_temp = df_temp[df_temp['Sector']==sector]
-
-    df_temp = df_temp.fillna(0)
-    new_data = [transform(record) for record in df_temp[:1000].to_dict(orient='records')]
-    return new_data
-
-#response_model=List[ClimateIndicator] 
-@app.get("/indicator",response_model=List[ClimateIndicator] ,tags=["Indicator"])
-async def getIndicatorResponse(
-    country:str = Query(None, description="Filter by Country"),
-    indicator : str = Query(None, description="Filter by Indicator")):
-
-    """Retrieve all Indicator response records"""
-    df_temp = df.groupby(['Country','Indicator','Unit'])[['2005',
-       '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014',
-       '2015', '2016', '2017', '2018', '2022']].sum().reset_index()
-
-
-    if country:
-        df_temp = df_temp[df_temp['Country']==country]
-
+        filtered = filtered[filtered["Sector"] == sector]
     if indicator:
-        df_temp = df_temp[df_temp['Indicator']==indicator]
+        filtered = filtered[filtered["Indicator"] == indicator]
 
-    
-
-    new_data = [transform(record) for record in df_temp[:1000].to_dict(orient='records')]
-    return new_data
-
-@app.get("/group/indicator",response_model=List[ClimategroupIndicator] ,tags=["Indicator"])
-async def getIndicatorResponse(
-    country:str = Query(None, description="Filter by Country"),
-    indicator : str = Query(None, description="Filter by Indicator")):
-
-    """Retrieve all Indicator response records"""
-    df_temp = df.groupby(['Country','Sector','Indicator','Unit'])[['2005',
-       '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014',
-       '2015', '2016', '2017', '2018', '2022']].sum().reset_index()
+    grouped = filtered.groupby(group_fields + ["Unit"], dropna=False)[year_columns].sum().reset_index()
+    return [_format_record(record, year_columns) for record in grouped.to_dict(orient="records")]
 
 
-    if country:
-        df_temp = df_temp[df_temp['Country']==country]
-
-    if indicator:
-        df_temp = df_temp[df_temp['Indicator']==indicator]
-
-    
-
-    new_data = [transform(record) for record in df_temp[:1000].to_dict(orient='records')]
-    return new_data
+def _get_chat_model() -> ChatGroq:
+    api_key = os.getenv("GROQ_API_KEY")
+    if not api_key:
+        raise HTTPException(status_code=503, detail="GROQ_API_KEY is not configured in the environment")
+    return ChatGroq(model="llama-3.3-70b-versatile", api_key=api_key)
 
 
-@app.get("/country",response_model=List[ClimateCountry] ,tags=["Country"])
-async def getIsoResponse(
-    country:str = Query(None, description="Filter by country"),
-    ):
+def _get_prompt() -> ChatPromptTemplate:
+    return ChatPromptTemplate.from_messages(
+        [
+            (
+                "system",
+                "You are a helpful assistant. Provide concise insights about climate and environment information using the user's context.",
+            ),
+            ("user", "{query}"),
+        ]
+    )
 
-    """Retrieve all Indicator response records"""
-    df_temp = df.groupby(['Country','ISO3'])[['2005',
-       '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014',
-       '2015', '2016', '2017', '2018', '2022']].sum().reset_index()
+
+df, YEAR_COLUMNS = _load_dataset()
 
 
-    if country:
-        df_temp = df_temp[df_temp['Country']==country]
+@app.get("/", response_class=HTMLResponse)
+def landing_page() -> HTMLResponse:
+    index_file = BASE_DIR / "static" / "index.html"
+    if not index_file.exists():
+        raise HTTPException(status_code=500, detail="Landing page not found")
+    return HTMLResponse(index_file.read_text(encoding="utf-8"))
 
-    new_data = [transform(record) for record in df_temp[:1000].to_dict(orient='records')]
-    return new_data    
 
-@app.get("/chat",tags=["Chatbot"])
-async def getchatResponse(
-    query:str = Query(None, description="user query"),
-    ):
-    
-    
-    res = model.invoke(prompt_template.invoke({"query": query}))
+@app.get("/sector", response_model=List[ClimateSector], tags=["Sector"])
+async def get_sector(
+    country: Optional[str] = Query(None, description="Filter by Country"),
+    sector: Optional[str] = Query(None, description="Filter by Sector"),
+) -> List[dict]:
+    """Retrieve aggregated sector data for each country."""
 
-    return res.content
-    
+    return _group_and_transform(df, YEAR_COLUMNS, ["Country", "Sector"], country=country, sector=sector)
+
+
+@app.get("/group/sector", response_model=List[ClimateGroupedSector], tags=["Sector"])
+async def get_grouped_sector(
+    country: Optional[str] = Query(None, description="Filter by Country"),
+    sector: Optional[str] = Query(None, description="Filter by Sector"),
+) -> List[dict]:
+    """Retrieve aggregated sector data grouped by indicator."""
+
+    return _group_and_transform(
+        df, YEAR_COLUMNS, ["Country", "Indicator", "Sector"], country=country, sector=sector
+    )
+
+
+@app.get("/indicator", response_model=List[ClimateIndicator], tags=["Indicator"])
+async def get_indicator(
+    country: Optional[str] = Query(None, description="Filter by Country"),
+    indicator: Optional[str] = Query(None, description="Filter by Indicator"),
+) -> List[dict]:
+    """Retrieve aggregated indicator data for each country."""
+
+    return _group_and_transform(df, YEAR_COLUMNS, ["Country", "Indicator"], country=country, indicator=indicator)
+
+
+@app.get("/group/indicator", response_model=List[ClimateGroupedIndicator], tags=["Indicator"])
+async def get_grouped_indicator(
+    country: Optional[str] = Query(None, description="Filter by Country"),
+    indicator: Optional[str] = Query(None, description="Filter by Indicator"),
+) -> List[dict]:
+    """Retrieve aggregated indicator data grouped by sector."""
+
+    return _group_and_transform(
+        df, YEAR_COLUMNS, ["Country", "Sector", "Indicator"], country=country, indicator=indicator
+    )
+
+
+@app.get("/country", response_model=List[ClimateCountry], tags=["Country"])
+async def get_country(country: Optional[str] = Query(None, description="Filter by Country")) -> List[dict]:
+    """Retrieve aggregated values grouped by country and ISO3 code."""
+
+    return _group_and_transform(df, YEAR_COLUMNS, ["Country", "ISO3"], country=country)
+
+
+@app.get("/chat", tags=["Chatbot"])
+async def chat(query: str = Query(..., description="User query")) -> dict:
+    """Lightweight chat endpoint backed by Groq's LLM."""
+
+    model = _get_chat_model()
+    prompt = _get_prompt().invoke({"query": query})
+    response = model.invoke(prompt)
+    return {"response": response.content}
+
+
+app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
+
 
 if __name__ == "__main__":
-    uvicorn.run("api:app", port=5000, log_level="info",reload=True)
+    import uvicorn
+
+    uvicorn.run("api:app", port=5000, log_level="info", reload=True)

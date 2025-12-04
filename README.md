@@ -99,3 +99,14 @@ Investment Decisions: Investors can use the data to assess climate risks in thei
 Policy Design: Governments and international organizations can use the data to track progress in financing climate action and assess financial flows to vulnerable regions or sectors.
 You can access this resource here, which was last accessed on November 26, 2024.
 
+
+## API quickstart
+The repository now includes a FastAPI service that ships with a small demo dataset (`data/climate_finance_sample.csv`) so you can explore the endpoints immediately.
+
+1. Install dependencies: `pip install -r requirements.txt`
+2. (Optional) Point to another CSV: `export CLIMATE_DATA_PATH=/path/to/your/data.csv`
+3. (Optional) Enable chat: `export GROQ_API_KEY=...`
+4. Start the server: `uvicorn api:app --reload --port 5000`
+5. Visit the landing page at `http://localhost:5000/` or the docs at `http://localhost:5000/docs`.
+
+Endpoints return tidy objects with a `years` array that is friendly for charting libraries and grouped aggregations for sectors, indicators, or countries.
