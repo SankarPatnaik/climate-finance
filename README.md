@@ -110,3 +110,15 @@ The repository now includes a FastAPI service that ships with a small demo datas
 5. Visit the landing page at `http://localhost:5000/` or the docs at `http://localhost:5000/docs`.
 
 Endpoints return tidy objects with a `years` array that is friendly for charting libraries and grouped aggregations for sectors, indicators, or countries.
+
+### Remote datasets from the IMF climate data portal
+The API now includes helper endpoints for the IMF climate data portal and its ArcGIS feature services. Supported datasets can be listed and queried without leaving your application:
+
+* `GET /remote/datasets` lists dataset keys, names, and source URLs.
+* `GET /remote/datasets/{dataset_key}` proxies queries to the backing ArcGIS feature service with optional parameters:
+  * `where`: ArcGIS SQL-style filter clause (defaults to `1=1`).
+  * `outFields`: Comma-separated fields to return (`*` by default).
+  * `outSR`: Spatial reference for geometry responses (defaults to `4326`).
+  * `limit`: Maximum number of records to return.
+
+The service currently ships with the Quarterly and Annual Greenhouse Gas Air Emissions Accounts datasets from the IMF portal. You can extend the registry in `services/data_portal.py` if more endpoints are needed.
